@@ -18,8 +18,10 @@ use Illuminate\Support\Facades\Route;
 //     return 'Hello';
 // });
 
-Route::get('/hello', function() {
-    return 'Hello';
+Route::group(['middleware' => ['cors']], function() {
+    Route::get('/hello', function() {
+        return 'Hello';
+    });
 });
 
 
