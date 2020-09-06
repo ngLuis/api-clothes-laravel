@@ -19,9 +19,5 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::group(['middleware' => ['cors']], function() {
-    Route::get('/hello', function() {
-        return 'Hello';
-    });
+    Route::resource('product','ProductController');
 });
-
-
