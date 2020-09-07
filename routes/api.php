@@ -21,4 +21,5 @@ use Illuminate\Support\Facades\Route;
 Route::group(['middleware' => ['cors']], function() {
     Route::resource('product','ProductController');
     Route::resource('size','SizeController');
+    Route::resource('type','TypeController');
 });
