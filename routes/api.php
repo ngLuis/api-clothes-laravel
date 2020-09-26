@@ -23,4 +23,6 @@ Route::group(['middleware' => ['cors']], function() {
     Route::resource('size','SizeController');
     Route::resource('type','TypeController');
     Route::post('file-upload', 'FileController@store');
+    Route::post('login', 'UserController@authenticate');
+    Route::post('register', 'UserController@register');
 });
